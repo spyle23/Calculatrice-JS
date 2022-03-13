@@ -37,7 +37,7 @@ arrayBouton[10].addEventListener("click",function (e) {     //quand ce bouton es
 //lorsque l'utilisateur voudrais quitter le programme
 arrayBouton.push(document.getElementById("btnExit"));
 arrayBouton[11].addEventListener("click",function (e) {
-    //en cours d'implémentation
+    window.close();         //on ferme l'onglet (la fenetre référencé si l'utilisateur click sur le bouton)
 });
 
 /*---------------------------------------------------implémentation des opérations------------------------------------------*/
@@ -82,10 +82,9 @@ arrayBouton[16].addEventListener("click",function (e) {
 //pour la fonction result
 arrayBouton.push(document.getElementById("btnResult"));
 arrayBouton[17].addEventListener("click",function (e) {
-    let result =0;
-    console.log(typeAct);
+    let result =0;              //création de la variable result pour stoquer le résultat
     number2 = ecran.value;
-    switch (typeAct) {
+    switch (typeAct) {          //Agir en fonction typeAct l'action qu'il faut faire
         case "+":
             result = Number(number1) + Number(number2);
             ecran.value = result;
@@ -96,7 +95,7 @@ arrayBouton[17].addEventListener("click",function (e) {
             break;
         case "/":
             if (number2 == 0) {
-                alert("maths error");
+                alert("maths error");       //afficher une message d'erreur à l'utilisateur concernant les regles de bases en mathématiques
                 return;
             }
             result = number1 / number2;
